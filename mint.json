@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Documentação",
   "logo": {
-    "dark": "https://smink.com.br/wp-content/uploads/2024/06/Group-1-1-1.png",
-    "light": "/logo/light.svg"
+    "dark": "https://sharebox.com.br/api/v1/file-entries/1695?shareable_link=35&password=null&thumbnail=",
+    "light": "https://sharebox.com.br/api/v1/file-entries/1695?shareable_link=35&password=null&thumbnail="
   },
   "favicon": "/favicon.svg",
   "colors": {
