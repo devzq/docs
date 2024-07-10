@@ -43,8 +43,8 @@
       "group": "Comece por aqui",
       "pages": [
         "guia/comece-aqui",
-        "gua/autenticacao",
-        "guia/codigos-http-das-resposta",
+        "guia/autenticacao",
+        "guia/codigo-http-das-resposta",
         "guia/limites-da-api"
       ]
     },
