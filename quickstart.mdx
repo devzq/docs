@@ -9,6 +9,12 @@ A autenticação em nossa API é feita através do uso de uma API Key. É atrav�
 
 Caso a chave de API seja inválida, não seja informada ou o header esteja incorreto, nossa API retornará `HTTP 401`.
 
+### Utilize os headers abaixo em todas as suas chamadas para a API:
+```json
+"Content-Type": "application/json",
+"APP_TOKEN": "sua_api_key"
+```
+
 ### Dicas importantes:
 <Warning>Após a geração da chave de API em nossa interface, armazene-a diretamente em seu cofre de chaves, evitando que seja exposta em mensagens de qualquer tipo ou emails. Nunca deixe a chave de API diretamente no código fonte de seus sistemas.</Warning>
 
