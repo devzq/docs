@@ -51,7 +51,7 @@
     {
       "group": "Serviços",
       "pages": [
-        "essentials/markdown",
+        "ocr/requisitos-do-arquivo",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
