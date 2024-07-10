@@ -42,10 +42,10 @@
     {
       "group": "Comece por aqui",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development",
-        "limites-api"
+        "guia/comece-aqui",
+        "gua/autenticacao",
+        "guia/codigos-http-das-resposta",
+        "guia/limites-da-api"
       ]
     },
     {
