@@ -1,98 +1,38 @@
 ---
-title: 'Development'
-description: 'Learn how to preview changes locally'
+title: 'Códigos HTTP das respostas'
+description: 'Nossa API utiliza respostas HTTP convencionais para indicar sucesso ou falha nas requisições. Respostas com status 200 indicam sucesso, status 4xx indicam falhas decorrentes de erros nas informações enviadas, e status 500 indicam erros internos em nosso servidor.'
 ---
 
 <Info>
-  **Prerequisite** You should have installed Node.js (version 18.10.0 or
-  higher).
+  **Atente-se** Todos os endpoints da API recebem e respondem em JSON.
 </Info>
 
-Step 1. Install Mintlify on your OS:
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify
+```json
+{
+    "errors":[
+        {
+            "code":"invalid_value",
+            "description":"O campo value deve ser informado"
+        },
+        {
+            "code":"invalid_dueDate",
+            "description":"A data de vencimento não pode ser inferior à hoje"
+        }
+    ]
+}
+}
 ```
 
-```bash yarn
-yarn global add mintlify
-```
 
-</CodeGroup>
+| Código HTTP                          | Descrição                                                                                                                                                        |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 200 OK                             | Sua requisição foi bem sucedida\.                                                                                                                                |
+| 400 Bad Request                    | Algum parâmetro obrigatório não foi enviado ou é inválido\. Neste caso a própria resposta indicará qual é o problema\.                                           |
+| 401 Unauthorized                   | Não foi enviada API Key ou ela é inválida\.                                                                                                                      |
+| 403 Forbidden                      | Requisição não autorizada\. Abuso da API ou uso de parâmetros não permitidos podem gerar este código\.                                                           |
+| 403 Forbidden / Cloudfront \(GET\) | Erros 403 em chamadas GET indicam que você está enviando um body junto da requisição\. Você não deve enviar nenhuma informação no body em chamadas do tipo GET\. |
+| 404 Not Found                      | O endpoint ou o objeto solicitado não existe\.                                                                                                                   |
+| 429 Too Many Requests              | Muitos pedidos em um determinado período de tempo\. Mais em nossa seção sobre Rate Limiting\.                                                                    |
+| 500 Internal Server Error          | Algo deu errado no servidor da smink\.                                                                                                                           |
 
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
 
-```bash
-mintlify dev
-```
-
-The documentation website is now available at `http://localhost:3000`.
-
-### Custom Ports
-
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
-
-```bash
-mintlify dev --port 3333
-```
-
-You will see an error like this if you try to run Mintlify in a port that's already taken:
-
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
-
-## Mintlify Versions
-
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Startup
-  Plan](https://mintlify.com/pricing)
-</Tip>
-
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Troubleshooting
-
-Here's how to solve some common problems when working with the CLI.
-
-<AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
-
-Repeat step 3.
-
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
