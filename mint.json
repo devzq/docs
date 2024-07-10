@@ -51,12 +51,7 @@
     {
       "group": "Serviços",
       "pages": [
-        "ocr/requisitos-do-arquivo",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "OCR/requisitos-do-arquivo"
       ]
     },
     {
