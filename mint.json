@@ -42,7 +42,7 @@
     {
       "group": "Comece por aqui",
       "pages": [
-        "visao-geral",
+        "introduction",
         "quickstart",
         "development"
       ]
