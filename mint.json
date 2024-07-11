@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Documentação",
+  "name": "Documentação Smink",
   "logo": {
-    "dark": "https://drive.google.com/file/d/1Ogdj40cSr2iAcMlqerbtfdzXMybJR3aY/view?usp=sharing",
-    "light": "https://sharebox.com.br/api/v1/file-entries/1695?shareable_link=35&password=null&thumbnail="
+    "dark": "https://smink.com.br/wp-content/uploads/2024/07/2.png",
+    "light": "https://smink.com.br/wp-content/uploads/2024/07/1.png"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://smink.com.br/wp-content/uploads/2024/03/cropped-logo-smink.png",
   "colors": {
     "primary": "#6300E9",
     "light": "#9647FF",
