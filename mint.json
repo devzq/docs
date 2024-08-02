@@ -1,6 +1,15 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Documentação Smink",
+  "api": {
+    "auth": {
+      "method": "key",
+      "name": "Authorization"
+    },
+    "playground": {
+      "mode": "show"
+    }
+  },
   "logo": {
     "dark": "https://smink.com.br/wp-content/uploads/2024/07/2-1.png",
     "light": "https://smink.com.br/wp-content/uploads/2024/07/1-1.png"
@@ -27,7 +36,7 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "API Docs",
       "url": "api-reference"
     }
   ],
@@ -49,31 +58,20 @@
       ]
     },
     {
-      "group": "Serviços",
+      "group": "Informações Básicas",
       "pages": [
-        "OCR/requisitos-do-documento",
-        "OCR/requisitos-do-arquivo"
+        "api-reference/authentication",
+        "api-reference/limitations-and-restrictions"
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "OCR",
+      "pages": ["api-reference/endpoint/ocr/ocr-cnh"]
     }
   ],
   "footerSocials": {
     "x": "https://x.com/mintlify",
     "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/mintsearch"
-  },
-  "openapi": "./openapi.json"
+  }
 }
